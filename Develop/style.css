@@ -22,6 +22,7 @@ body {
 
 }
 
+
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -68,4 +69,10 @@ button[disabled] {
 
 .float-right {
   float: right;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+
 }
