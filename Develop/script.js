@@ -10,13 +10,43 @@ var Question = document.querySelector("#Q");
 
 var totalSeconds = 300;
 var interval;
-var fakequestions = [{
-    A: "Answer A",
-    B: "Answer B",
-    C: "Answer C",
-    D: "Answer D",
-    Q: "ABCD",
-},]; 
+// Array and Object for code questions.
+var questions = [{
+    Q: "Which dinosaur is classified as a carnivore?",
+    A: "Brontosaurus",
+    B: "Triceratops",
+    C: "T-Rex",
+    D: "Your pet cat",
+}, 
+{
+    Q: "When did dinosaurs go extinct?",
+    A: "Yesterday",
+    B: "Last week",
+    C: "65 million years ago",
+    D: "1000 years ago",
+},
+{
+    Q: "On which continent have the most dinosaur fossils been found?",
+    A: "North America",
+    B: "Africa",
+    C: "Asia",
+    D: "Hawaii",
+},
+{
+    Q: "How did Stegosaurus protect itself from enemies?",
+    A: "Ran away",
+    B: "Stomped on them",
+    C: "Smacked them with its spiky tail",
+    D: "Bit them",
+},
+{
+    Q: "If a T-Rex were chasing you across a field, how could you outrun this predator?",
+    A: "Call an uber",
+    B: "By walking",
+    C: "By riding a skateboard",
+    D: "By zooming away on a motorized scooter",
+}
+]; 
 
 function setTime() {
     clearInterval(interval)
@@ -86,8 +116,8 @@ function renderquestion(question) {
 
 function startgame() {
     startTimer();
-    for(var i = 0; i < fakequestions.length; i++){
-        var question = fakequestions[i]
+    for(var i = 0; i < questions.length; i++){
+        var question = questions[i]
         renderquestion(question)
     }
     
