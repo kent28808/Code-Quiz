@@ -46,6 +46,7 @@ var questions = [{
     C: "By riding a skateboard",
     D: "By zooming away on a motorized scooter",
 }
+
 ]; 
 
 function setTime() {
@@ -106,22 +107,30 @@ function stopTimer() {
     renderTime();
 }
 
+function startgame() {
+    startTimer();
+    for(var i = 0; i < questions.length; i++){
+        var question = questions[i];
+        renderquestion(question);
+        if(response == questions[i].answer){
+            score++;
+        }
+    }
+    
+}
+
 function renderquestion(question) {
     ButtonA.textContent = question.A;
     ButtonB.textContent = question.B;
     ButtonC.textContent = question.C;
     ButtonD.textContent = question.D;
     Question.textContent = question.Q;
-}
-
-function startgame() {
-    startTimer();
-    for(var i = 0; i < questions.length; i++){
-        var question = questions[i]
-        renderquestion(question)
-    }
     
 }
+
+//function selectAnswer() {}
+
+//function reset answers
 
 startButton.addEventListener("click", startgame);
 
